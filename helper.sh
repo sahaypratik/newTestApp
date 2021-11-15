@@ -12,7 +12,9 @@ contents="$(jq -n \
    --arg v4 "$1" \
    --arg k5 'appLabel' \
    --arg v5 "$1" \
-   '. | .[$k1]=$v1 | .[$k2]=$v2 | .[$k3]=$v3 | .[$k4]=$v4 | .[$k5]=$v5' \
+   --arg k6 'introsliders' \
+   --arg v6 "false" \
+   '. | .[$k1]=$v1 | .[$k2]=$v2 | .[$k3]=$v3 | .[$k4]=$v4 | .[$k5]=$v5 | .[$k6]=$v6' \
    <<<'{}'
 )"
 rm app/flavours/flavourfiles.json
