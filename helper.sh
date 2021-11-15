@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # TODO: find a cleaner way to compose JSON
 contents="$(jq -n \
