@@ -5,18 +5,14 @@ contents="$(jq -n \
    --arg k1 'appName' \
    --arg v1 "$1" \
    --arg k2 'appId' \
-   --arg v2 "$2" \
+   --arg v2 "com.$1.connect" \
    --arg k3 'flavourName' \
-   --arg v3 "$3" \
+   --arg v3 "$1" \
    --arg k4 'prefix' \
-   --arg v4 "$4" \
+   --arg v4 "$1" \
    --arg k5 'appLabel' \
-   --arg v5 "$5" \
-   --arg k6 'imageUrl' \
-   --arg v6 "$6" \
-   --arg k7 'introsliders' \
-   --arg v7 "$7" \
-   '. | .[$k1]=$v1 | .[$k2]=$v2 | .[$k3]=$v3 | .[$k4]=$v4 | .[$k5]=$v5| .[$k6]=$v6| .[$k7]=$v7' \
+   --arg v5 "$1" \
+   '. | .[$k1]=$v1 | .[$k2]=$v2 | .[$k3]=$v3 | .[$k4]=$v4 | .[$k5]=$v5' \
    <<<'{}'
 )"
 rm app/flavours/flavourfiles.json
