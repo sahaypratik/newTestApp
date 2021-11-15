@@ -70,7 +70,7 @@ android {
             variant.resValue("string","firebaseChatBaseUrl","https://winuall-connect-chat-db.firebaseio.com")
             variant.resValue("string","firebaseUserListUrl","https://winuall-connect-chatprofiledb.firebaseio.com")
             variant.resValue("string", "introsliders", serviceMap.get(flavor.name))
-            variant.resValue("string", "siteBaseUrl", serviceMap.get(flavor.name + "site_base_url"))
+            //variant.resValue("string", "siteBaseUrl", serviceMap.get(flavor.name + "site_base_url"))
             //implementation('com.android.support:leanback-v17:22.2.1')
             //variant.resValue("bool", "introsliders", serviceMap.get(flavor.name))
         }
