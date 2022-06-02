@@ -26,7 +26,16 @@ allprojects {
 
 // Download SDK for Zoom
 task downloadLibs(type: Download) {
+    src 'http://13.232.225.92:8082/artifactory/libs/mobilertc.aar'
+    dest './libs/mobilertc/mobilertc.aar'
+    overwrite false
 
+    doLast {
+        copy {
+            from './libs/mobilertc/mobilertc.aar'
+            into './mobilertc/'
+        }
+    }
 }
 
 task clean(type: Delete) {
